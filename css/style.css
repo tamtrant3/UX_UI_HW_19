@@ -1,0 +1,369 @@
+/* DOCUMENT SETUP */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --ln: 1px solid #ccc;
+    --page-margin: 3rem;
+    --nav-height: 72px;
+    --footer-height: 72px;
+    --h1: 26px;
+}
+
+/*NAV*/
+
+nav {
+    height: var(--nav-height);
+    /* border-bottom: var(--ln); */
+    padding: 0 var(--page-margin);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav .burger {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+/* SHELL */
+#shell {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#bio {
+    grid-column: span 4;
+    height: calc(100vh - var(--nav-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*border-right: var(--ln);*/
+    background-image: url(../Images/pfp-image.svg);
+    background-size: 66%;
+    background-repeat: no-repeat;
+    background-position: 0% 30%;
+}
+
+#bio > .bubble {
+    width: 58%;
+    padding: 1rem;
+    transform: translate(90%, var(--page-margin));
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0.4rem 0.4rem 0 black;
+    background-color: white; 
+}
+
+.bubble {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bubble h1 {
+    font-size: var(--h1);
+}
+/* FOOTER */
+
+#bio > footer {
+    height: var(--footer-height);
+    padding: 0 var(--page-margin);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border-top: var(--ln); */
+}
+
+.social > * {
+    height: 32px;
+    width: 32px;
+}
+
+.social {
+    display: flex;
+    gap: 2rem;
+}
+
+.linkedin {
+    background-image: url(../Images/linkedin-logo.png);
+    background-size: cover;
+}
+
+.mail {
+    background-image: url(../Images/mail-logo.png);
+    background-size: cover;
+}
+
+.instagram {
+    background-image: url(../Images/instagram-logo.png);
+    background-size: cover;
+}
+
+/*MAIN */
+
+main {
+    grid-column: span 8;
+    overflow-y: scroll;
+    max-height: calc(100vh - var(--nav-height));
+    padding: 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-margin);
+    background-color: #F3F1Ed;
+}
+
+main > .casestudy {
+    min-height: 300px;
+    display: flex;
+    border: var(--ln);
+    border-radius: 1rem;
+}
+
+main > .casestudy > .left {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border-right: var(--ln); 
+}
+
+main > .casestudy > .right {
+    flex: 3;
+}
+
+#casestudy1 {
+    background-image: url(../Images/wires-mock-up.png);
+    background-size: 130%;
+    background-position: 70% 70%;
+    background-repeat: no-repeat;
+}
+
+#casestudy2 {
+    background-image: url(../Images/curiado-mock-up.png);
+    background-size: 130%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#casestudy3 {
+    background-image: url(../Images/cer-mock-up.png);
+    background-size: 130%;
+    background-position: 70% 70%;
+    background-repeat: no-repeat;
+}
+
+/* #casestudy4 {
+    background-image: url(../Images/wires-mock-up.png);
+    background-size: 130%;
+    background-position: 70% 70%;
+    background-repeat: no-repeat;
+} */
+
+button {
+    width: 30%;
+    min-height: 36px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    box-shadow: 0.2rem 0.2rem 0 black;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+/* 1200px SCREEN */
+
+@media only screen and (max-width: 1200px) {
+    #bio {
+        background-position: 0 40%;
+    }
+
+    button {
+        width: 40%;
+    }
+}
+
+/* 1114px SCREEN */
+
+@media only screen and (max-width: 1114px) {
+    #bio {
+        background-position: 0 50%;
+    }
+
+    #bio > .bubble {
+        width: 62%;
+    }
+
+    .social {
+        gap: 1.5rem;
+    }
+}
+
+/* 1050px SCREEN */
+
+@media only screen and (max-width: 1050px) {
+    button {
+        width: 50%;
+    }
+
+    .social {
+        gap: 1rem;
+    }
+}
+
+/* 956px SCREEN */
+
+@media only screen and (max-width: 956px) {
+    #bio {
+        background-position: 0 60%;
+    }
+
+    main {
+        padding: 3rem 5rem;
+    }
+
+    #bio > footer {
+        padding: 0 1rem;
+    }
+
+    .social {
+        gap: 1rem;
+    }
+}
+
+/* 881px SCREEN */
+
+@media only screen and (max-width: 881px) {
+    #bio {
+        background-position: 0 70%;
+    }
+}
+
+/* 806px SCREEN */
+
+@media only screen and (max-width: 806px) {
+    #bio {
+        background-position: 0 80%;
+    }
+    
+    button {
+        width: 60%;
+    }
+    main > .casestudy > .left {
+        gap: 1rem;
+    }
+}
+
+/* 796px SCREEN */
+
+@media only screen and (max-width: 796px) {
+    #shell {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #bio {
+        z-index: 1;
+        background-size: 30%;
+        background-position: 0% 20%;
+    }
+
+    #bio > .bubble {
+        transform: translate(50%, var(--page-margin));
+    }
+
+    #bio > footer {
+        background-color: white;
+        position:fixed;
+        bottom: 0;
+        width: 100vw;
+        padding: 0 var(--page-margin);
+    }
+
+    main {
+        transform: translate(0rem, -35rem); 
+        padding: 5rem 2rem;
+        height: 100%;
+        overflow-y: unset;
+       }
+
+       main > .casestudy {
+        transform: translate(0rem, 10rem);
+        min-height: 250px;
+       }
+       
+       main > .casestudy > .right {
+        flex: 2;
+       }
+}
+
+/* 600px SCREEN */
+
+@media only screen and (max-width: 600px) {
+    #bio {
+        background-size: 40%;
+    }
+
+    #bio > .bubble {
+        transform: translate(55%, var(--page-margin));
+    }
+
+    nav .links {
+        display: none;
+    }
+
+    nav .burger {
+        display: inherit;
+        transform: rotate(90deg);
+        font-weight: 600;
+        font-size: 1.5rem;
+        cursor: pointer;        
+    }
+
+    /* .menu {
+        display: inherit;
+    }
+
+     .menu .menu-item {
+        background-color: black;
+        color: white;
+        height: 56px;
+        padding: 0 var(--page-margin);
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+    } */
+}

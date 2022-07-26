@@ -251,9 +251,45 @@ main > .projects > .casestudygroup > .casestudy > .right {
 }
 
 .softwares > * {
-    border: var(--ln);
+    /* border: var(--ln); */
     height: 5rem;
     width: 5rem;
+}
+
+.figma {
+    background-image: url(../images/figma.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.html {
+    background-image: url(../images/html.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.css {
+    background-image: url(../images/css.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ai {
+    background-image: url(../images/illustrator.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ps {
+    background-image: url(../images/photoshop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pr {
+    background-image: url(../images/premiere-pro.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 button {

@@ -63,7 +63,7 @@ nav .burger {
     flex-direction: column;
     justify-content: space-between;
     /*border-right: var(--ln);*/
-    background-image: url(../Images/pfp-image.svg);
+    background-image: url(../images/pfp-image.svg);
     background-size: 66%;
     background-repeat: no-repeat;
     background-position: 0% 30%;
@@ -124,17 +124,17 @@ nav .burger {
 }
 
 .linkedin {
-    background-image: url(../Images/linkedin-logo.png);
+    background-image: url(../images/linkedin-logo.png);
     background-size: cover;
 }
 
 .mail {
-    background-image: url(../Images/mail-logo.png);
+    background-image: url(../images/mail-logo.png);
     background-size: cover;
 }
 
 .instagram {
-    background-image: url(../Images/instagram-logo.png);
+    background-image: url(../images/instagram-logo.png);
     background-size: cover;
 }
 
@@ -194,7 +194,7 @@ main > .projects > .casestudygroup > .casestudy > .right {
 }
 
 #casestudy1 {
-    background-image: url(../Images/wires-mock-up.png);
+    background-image: url(../images/wires-mock-up.png);
     background-size: 130%;
     background-position: 70% 70%;
     background-repeat: no-repeat;
@@ -207,7 +207,7 @@ main > .projects > .casestudygroup > .casestudy > .right {
 }
 
 #casestudy2 {
-    background-image: url(../Images/curiado-mock-up.png);
+    background-image: url(../images/curiado-mock-up.png);
     background-size: 130%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -220,7 +220,7 @@ main > .projects > .casestudygroup > .casestudy > .right {
 }
 
 #casestudy3 {
-    background-image: url(../Images/cer-mock-up.png);
+    background-image: url(../images/cer-mock-up.png);
     background-size: 130%;
     background-position: 70% 70%;
     background-repeat: no-repeat;

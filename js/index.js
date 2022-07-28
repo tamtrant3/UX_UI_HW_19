@@ -2,7 +2,7 @@ $('.burger').click(function() {
     $('.menu').slideToggle()
 })
 
-ScrollReveal().reveal('.casestudy, .softwares', {
+/* ScrollReveal().reveal('.casestudy, .softwares', {
     delay: 300,
     distance: '0px',
     duration: 1000,
@@ -35,4 +35,4 @@ ScrollReveal().reveal('.casestudy, .softwares', {
     },
     beforeReset: function (el) {},
     beforeReveal: function (el) {},
-});
+}); */

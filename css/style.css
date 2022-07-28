@@ -38,8 +38,13 @@ nav .links {
 
 nav a {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color:#DA7D30;
 }
 
 nav .burger {
@@ -75,8 +80,8 @@ nav .burger {
     transform: translate(90%, var(--page-margin));
     border: 1px solid black;
     border-radius: 0.5rem;
-    box-shadow: 0.4rem 0.4rem 0 black;
-    background-color: white; 
+    /* box-shadow: 0.4rem 0.4rem 0 black; */
+    background-color: white;
 }
 
 .bubble {
@@ -107,6 +112,7 @@ nav .burger {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
 }
 
 .footermobile {
@@ -246,50 +252,66 @@ main > .projects > .casestudygroup > .casestudy > .right {
 }
 
 .softwares {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(2 1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .softwares > * {
     /* border: var(--ln); */
-    height: 5rem;
-    width: 5rem;
+    height: 7rem;
+    width: 7rem;
 }
 
 .figma {
     background-image: url(../images/figma.png);
     background-size: contain;
     background-repeat: no-repeat;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .html {
     background-image: url(../images/html.png);
     background-size: contain;
     background-repeat: no-repeat;
+    grid-column: 2/3;
+    grid-row: 1/2;
 }
 
 .css {
     background-image: url(../images/css.png);
     background-size: contain;
     background-repeat: no-repeat;
+    grid-column: 3/4;
+    grid-row: 1/2;
 }
 
 .ai {
     background-image: url(../images/illustrator.png);
     background-size: contain;
     background-repeat: no-repeat;
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
 
 .ps {
     background-image: url(../images/photoshop.png);
     background-size: contain;
     background-repeat: no-repeat;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
 .pr {
     background-image: url(../images/premiere-pro.png);
     background-size: contain;
     background-repeat: no-repeat;
+    grid-column: 3/4;
+    grid-row: 2/3;
 }
 
 button {
@@ -318,6 +340,14 @@ button:active {
 
 /* MEDIA QUERIES */
 
+/*1200px SCREEN */
+
+@media only screen and (max-width: 1200px) {
+    .casestudy > .left > button {
+        width: 40%;
+    }
+}
+
 /* 992px SCREEN */
 
 @media only screen and (max-width: 992px) {
@@ -339,6 +369,10 @@ button:active {
 
     .social {
         gap: 1rem;
+    }
+
+    .casestudy > .left > button {
+        width: 50%;
     }
 } 
 
@@ -370,20 +404,16 @@ button:active {
 
     .footermobile {
         display: flex;
-    }
-    
-    #bio > .footermobile {
-        background-color: white;
-        width: 100vw;
-        padding: 0 var(--page-margin);
-        position: sticky;
+        position: fixed;
         bottom: 0;
+        left: 0;
+        right: 0;
     }
 
     main {
         padding: 5rem 2rem;
         overflow-y: visible;
-        min-height: 200vh;
+        min-height: 300vh;
        }
        
        main > .casestudy > .right {
